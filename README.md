@@ -1,2 +1,2 @@
 # opentracking
-Logs users ip address when image is requested
+Logs users ip address and returns image
