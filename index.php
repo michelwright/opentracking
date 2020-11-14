@@ -21,19 +21,21 @@ function getUserIpAddr(){
   return $ip;
 }
 
+//suggestion -> create log_tbl to log success/errors
+
 function logAccess(){
     $ip_addr = getUserIpAddr();
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
     if ($conn->connect_error) {
-      //log db connection errors here
+      //error {log}
     }
     $sql = "INSERT INTO `access_info` (`ip_address`) VALUES ('$ip_addr')";   
     if ($conn->query($sql) === TRUE) {
-      //log successful queries here
+      //success {log}
     } else {
-      //log error queries here
+      //error {log}
     }
 }
 
