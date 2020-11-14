@@ -21,7 +21,7 @@ function getUserIpAddr(){
   return $ip;
 }
 
-//suggestion -> create log_tbl to log success/errors
+//suggestion --> create log_tbl to log success/errors
 
 function logAccess(){
     $ip_addr = getUserIpAddr();
